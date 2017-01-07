@@ -1,0 +1,321 @@
+// font default
+//-----------------------------------------------------------------------------------
+body, input, button, select, textarea
+  font-family: $default-font !important
+  font-size: $all-size
+
+// Common classes
+//-----------------------------------------------------------------------------------
+.clear
+  clear: both
+//@extend %clear-fix
+%clear-fix:after
+  content: ''
+  clear: both
+  display: table
+  width: 100%
+
+// positioning
+//-----------------------------------------------------------------------------------
+.pa
+  position: absolute
+
+.pr
+  position: relative
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+// text align -- registration
+//-----------------------------------------------------------------------------------
+.text
+  &-left
+    text-align: left
+
+  &-center
+    text-align: center
+
+  &-right
+    text-align: right
+
+pre, code
+  font-family: monospace
+
+// link
+//-----------------------------------------------------------------------------------
+a
+  color: $color-link
+  outline: none
+
+  &:hover
+    text-decoration: none
+
+img
+  border: none
+  vertical-align: top
+  max-width: 100%
+  height: auto
+
+// form
+//-----------------------------------------------------------------------------------
+input
+  vertical-align: middle
+  margin: 0
+  padding: 0
+
+  ::-ms-clear,
+  ::-ms-reveal
+    display: none
+    width: 0
+    height: 0
+
+button,
+a.button,
+input[type='reset'],
+input[type='submit'],
+input[type='button'],
+input[type='image']
+  display: inline-block
+  width: auto
+  margin: 0
+  padding: 0
+  overflow: visible
+  outline: 0
+  border: 0
+  cursor: pointer
+  vertical-align: middle
+  text-align: center
+  text-decoration: none
+input.readonly,
+input[readonly]
+  cursor: not-allowed
+  color: #999
+
+// WebKit/Blink Browsers
+//-----------------------------------------------------------------------------------
+::selection
+  background: $color-selection
+
+
+// vertical align middle
+//-----------------------------------------------------------------------------------
+%vafix:before
+  display: inline-block
+  margin-right: -0.25em
+  height: 100%
+  content: ''
+  vertical-align: middle
+
+.background-dask
+  background-color: $background-color
+
+.bg-white
+  background-color: #fff
+
+.bg-dask
+  background-color: $background-color
+
+.bg-blue-m
+  background-color: $background-blue-m
+.inline
+  list-style: none
+  width: 100%
+  margin: 0
+  padding: 0
+  li
+    display: inline
+
+.filters
+  padding: 10px 0
+  text-align: right
+  li
+    a
+      padding: 0 7px
+
+.hor-actions
+  padding: 10px 0 0 0
+  display: inline-block
+  float: right
+  margin-right: 20px
+  .actions
+    color: #d2583d
+    font-size: 26px
+    i
+      font-size: 26px
+      line-height: 26px
+  .open
+    .dropdown-menu
+      left: auto
+      right: 0
+      &:before,
+      &:after
+        left: auto
+        right: 9px
+
+.margin-top-5
+  margin-top: 5px
+  
+.margin-top-10
+  margin-top: 10px
+
+.margin-bot-10
+  margin-bottom: 10px
+
+.no-padding
+  padding-left: 0px !important
+  padding-right: 0px !important
+.no-pad-left
+  padding-left: 0px !important
+.no-pad-right
+  padding-right: 0px !important
+.no-pad-r8
+  padding-right: 8px !important
+  
+.form 
+  .form-actions
+    padding: 20px 10px
+    margin: 0
+    border-top: 1px solid #e5e5e5
+
+.green.btn 
+  color: #FFFFFF
+  background-color: #26a69a
+.default
+  background-color: #ccc
+#message
+  padding: 10px 0
+  .alert
+    margin-bottom: 10px
+
+.actions
+  &.btn-sm
+    padding: 2px 8px
+
+.hoverable
+  position: relative
+  .overlay
+    display: none
+  &:hover
+    .overlay
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      background: rgba(0,0,0,.3)
+      color: #fff
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      height: 98%
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+      position: absolute
+      text-align: center
+      width: 100%
+      line-height: 1.42857143
+      border: 1px solid #ddd
+      border-radius: 4px
+      cursor: pointer
+      font-weight: 600
+img.img-200x240
+  width: 200px
+  height: 240px
+
+.control-label
+  .required
+    color: #e02222
+    font-size: 12px
+    padding-left: 2px
+
+.modal-dialog 
+  &.modal-blg
+    width: 1169px
+  .modal-title
+    font-size: $title-sm-size
+    font-weight: 600
+.link
+  color: $color-orange
+  text-decoration: underline
+/**
+ * Form validation
+ */
+form
+  input
+    &.error
+      border-color: #ebccd1
+      -webkit-box-shadow: none
+      box-shadow: none
+  label
+    &.error
+      color: #a94442
+      width: 75%
+      float: right
+      font-weight: 400
+.adw-modal
+  .modal-content
+    h3.title
+      text-transform: uppercase
+      font-size: $title-size
+      color: $color-link
+  .form-actions
+    background-color: $background-color
+
+/**
+ * Site style
+ */
+.list-unstyled
+  padding-left: 0
+  list-style: none
+.icon-bg
+  font-size: $title-size !important
+.height
+  min-height: 295px !important
+.height-sm
+  min-height: 240px !important
+
+.btn-send-sm
+  padding: 2px 8px
+  margin-right: 9px
+.col-task
+  width: 95%
+.middle
+  vertical-align: middle !important
+
+/**
+ * Color var
+ */
+.orange
+  color: $color-orange
+.green
+  color: green
+.green-grey
+  background-color: #1f897f
+.yellow
+  color: yellow
+.red
+  color: red
+.white
+  color: white
+.no-border
+  border-radius: 0
+  border-bottom: 1px solid #fff
+
+/**
+ * Fixed z-index select2
+ */
+.select2-dropdown
+  z-index: 10060 !important
+
+.price
+  font-weight: bold
+.more
+  float: left
+  width: 95px
+  overflow: hidden
+  clear: left
+  text-align: right
+  text-overflow: ellipsis
+  white-space: nowrap
